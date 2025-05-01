@@ -9,8 +9,11 @@ import AlertsPage from './dashboard/alerts/page'
 import StatisticsPage from './dashboard/statistics/page'
 import SettingsPage from './dashboard/settings/page'
 import GeofencingPage from './dashboard/geofancing/page'
+import LoginPage from './login/login'
+import SignupPage from './signup/signup'
 import './App.css'
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster  } from "@/components/ui/sonner"
 
 function  App() {
   return (
@@ -19,6 +22,8 @@ function  App() {
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<DashboardLayout><DashboardPage /></DashboardLayout>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/dashboard/vehicles" element={<DashboardLayout><VehiclesPage /></DashboardLayout>} />
         <Route path="/dashboard/tracking" element={<DashboardLayout><TrackingPage /></DashboardLayout>} />
         <Route path="/dashboard/history" element={<DashboardLayout><HistoryPage /></DashboardLayout>} />
@@ -28,6 +33,7 @@ function  App() {
         <Route path="/dashboard/statistics" element={<DashboardLayout><StatisticsPage /></DashboardLayout>} />
         <Route path="/dashboard/settings" element={<DashboardLayout><SettingsPage /></DashboardLayout>} />
       </Routes>
+      <Toaster richColors />
     </BrowserRouter>
     </ThemeProvider>
   )
