@@ -9,6 +9,7 @@ import ImmobilizationPage from './dashboard/immobilization/page'
 import AlertsPage from './dashboard/alerts/page'
 import StatisticsPage from './dashboard/statistics/page'
 import SettingsPage from './dashboard/settings/page'
+import GeofencingPage from './dashboard/geofancing/page'
 import './App.css'
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -23,6 +24,7 @@ function  App() {
         <Route path="/dashboard/vehicles/add" element={<DashboardLayout><AddVehiclePage /></DashboardLayout>} />
         <Route path="/dashboard/tracking" element={<DashboardLayout><TrackingPage /></DashboardLayout>} />
         <Route path="/dashboard/history" element={<DashboardLayout><HistoryPage /></DashboardLayout>} />
+        <Route path="/dashboard/geofencing" element={<DashboardLayout><GeofencingPage /></DashboardLayout>} />
         <Route path="/dashboard/immobilization" element={<DashboardLayout><ImmobilizationPage /></DashboardLayout>} />
         <Route path="/dashboard/alerts" element={<DashboardLayout><AlertsPage /></DashboardLayout>} />
         <Route path="/dashboard/statistics" element={<DashboardLayout><StatisticsPage /></DashboardLayout>} />
