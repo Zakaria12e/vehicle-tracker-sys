@@ -29,7 +29,6 @@ export default function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
                   required
                 />
               </div>
