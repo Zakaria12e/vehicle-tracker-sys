@@ -19,11 +19,11 @@ export function SettingsLayout({ children }: SettingsLayoutProps) {
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/4">
             <TabsList className="flex flex-col h-auto p-0 bg-transparent space-y-1">
-              <TabsTrigger value="profile" className="justify-start px-4 py-2 h-9 data-[state=active]:bg-muted">
+              <TabsTrigger value="profile" className="justify-start px-4 py-2 h-9 w-[150px] data-[state=active]:bg-muted">
                 <User className="h-4 w-4 mr-2" />
                 Profile
               </TabsTrigger>
-              <TabsTrigger value="security" className="justify-start px-4 py-2 h-9 data-[state=active]:bg-muted">
+              <TabsTrigger value="security" className="justify-start px-4 py-2 h-9 w-[150px] data-[state=active]:bg-muted">
                 <Lock className="h-4 w-4 mr-2" />
                 Security
               </TabsTrigger>
