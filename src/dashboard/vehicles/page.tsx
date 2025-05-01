@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Plus } from "lucide-react"
 
+import { Plus, MapPin, Clock , Battery, MoreHorizontal, ArrowUpRight, Pencil, Trash2} from "lucide-react"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
 import {
     Dialog,
     DialogContent,
@@ -12,6 +20,7 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog"
   import { Label } from "@/components/ui/label"
+  import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function VehiclesPage() {
     return (
@@ -64,6 +73,70 @@ export default function VehiclesPage() {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+      </div>
+
+    
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    
+        <Card>
+          <CardHeader className="pb-2">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-base">Honda Civic</CardTitle>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <MoreHorizontal className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <Pencil className="mr-2 h-4 w-4" />
+                    Edit
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <MapPin className="mr-2 h-4 w-4" />
+                    Track
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Clock className="mr-2 h-4 w-4" />
+                    History
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem className="text-red-600">
+                    <Trash2 className="mr-2 h-4 w-4" />
+                    Delete
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+            <CardDescription>DEF-456 • Last updated 2h ago</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="flex items-center gap-1">
+                <div className="flex h-2 w-2 rounded-full bg-red-500" />
+                <span>Offline</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="h-4 w-4 text-muted-foreground" />
+                <span>0 km/h</span>
+              </div>
+              <div className="flex items-center gap-1">
+                        <Battery className="h-4 w-4 text-muted-foreground" />
+                        <span>100%</span>
+                      </div>
+            </div>
+          </CardContent>
+          <CardFooter className="pt-0">
+            <Button variant="outline" size="sm" className="w-full gap-1">
+              <ArrowUpRight className="h-3 w-3" />
+              View Details
+            </Button>
+          </CardFooter>
+        </Card>
       </div>
 
         </div>
