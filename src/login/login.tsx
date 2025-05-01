@@ -44,7 +44,7 @@ export default function LoginForm({
                 </div>
                 <Input id="password" type="password" required />
               </div>
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full cursor-pointer">
                 Login
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
@@ -52,7 +52,7 @@ export default function LoginForm({
                   Or continue with
                 </span>
               </div>
-              <Button className="mt-8 w-full gap-3"><GoogleLogo />Continue with Google</Button>
+                <Button className="mt-8 w-full gap-3 cursor-pointer"><GoogleLogo />Continue with Google</Button>
               <div className="text-center text-sm">
                 Don&apos;t have an account?{" "}
                 <Link to="/signup" className="underline underline-offset-4">
