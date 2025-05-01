@@ -43,9 +43,20 @@ export default function Signup({
                   required
                 />
               </div>
+              
              
               </div>
               <div className="grid grid-cols-2 gap-4">
+
+              <div className="grid gap-3">
+                <Label htmlFor="companyName">Company Name</Label>
+                <Input
+                  id="companyName"
+                  type="text"
+                
+                  required
+                />
+              </div>
               <div className="grid gap-3">
                 <Label htmlFor="password">Password</Label>
                 <Input 
@@ -55,15 +66,7 @@ export default function Signup({
                   
                 />
               </div>
-              <div className="grid gap-3">
-                <Label htmlFor="confirmPassword">Confirm Password</Label>
-                <Input 
-                  id="confirmPassword" 
-                  type="password" 
-                  required 
-                  
-                />
-              </div>
+             
               </div>
               
               <Button type="submit" className="w-full cursor-pointer">
