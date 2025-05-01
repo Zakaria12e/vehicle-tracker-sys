@@ -114,6 +114,62 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-xl">Your Vehicles</CardTitle>
+          <CardDescription>Manage and monitor your vehicle fleet</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Tabs defaultValue="all">
+            <TabsList className="mb-4">
+              <TabsTrigger value="all">All Vehicles</TabsTrigger>
+              <TabsTrigger value="active">Active</TabsTrigger>
+              <TabsTrigger value="idle">Idle</TabsTrigger>
+              <TabsTrigger value="offline">Offline</TabsTrigger>
+            </TabsList>
+            <TabsContent value="all" className="space-y-4">
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          
+
+                <Card>
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-base">Honda Civic</CardTitle>
+                      <div className="flex h-2 w-2 rounded-full bg-red-500" />
+                    </div>
+                    <CardDescription>DEF-456 • Last updated 2h ago</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-3 gap-3 text-sm">
+                      <div className="flex items-center gap-1">
+                        <MapPin className="h-4 w-4 text-muted-foreground" />
+                        <span>Unknown</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <span>0 km/h</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Battery className="h-4 w-4 text-muted-foreground" />
+                        <span>100%</span>
+                      </div>
+                     
+                    </div>
+                  </CardContent>
+                  <CardContent className="pt-0">
+                    <Button variant="outline" size="sm" className="w-full gap-1" asChild>
+                      <a href="/dashboard/tracking">
+                        <ArrowUpRight className="h-3 w-3" />
+                        View Details
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
     </div>
   )
 }
