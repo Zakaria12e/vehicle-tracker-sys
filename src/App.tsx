@@ -1,17 +1,35 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import DashboardLayout from './dashboard/layout'
+import DashboardPage from './dashboard/page'
+import VehiclesPage from './dashboard/vehicles/page'
+import AddVehiclePage from './dashboard/vehicles/add/page'
+import TrackingPage from './dashboard/tracking/page'
+import HistoryPage from './dashboard/history/page'
+import ImmobilizationPage from './dashboard/immobilization/page'
+import AlertsPage from './dashboard/alerts/page'
+import StatisticsPage from './dashboard/statistics/page'
+import SettingsPage from './dashboard/settings/page'
 import './App.css'
-import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "@/components/theme-provider"
 
-function App() {
-
-
+function  App() {
   return (
-    <>
-    
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
- 
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/dashboard" element={<DashboardLayout><DashboardPage /></DashboardLayout>} />
+        <Route path="/dashboard/vehicles" element={<DashboardLayout><VehiclesPage /></DashboardLayout>} />
+        <Route path="/dashboard/vehicles/add" element={<DashboardLayout><AddVehiclePage /></DashboardLayout>} />
+        <Route path="/dashboard/tracking" element={<DashboardLayout><TrackingPage /></DashboardLayout>} />
+        <Route path="/dashboard/history" element={<DashboardLayout><HistoryPage /></DashboardLayout>} />
+        <Route path="/dashboard/immobilization" element={<DashboardLayout><ImmobilizationPage /></DashboardLayout>} />
+        <Route path="/dashboard/alerts" element={<DashboardLayout><AlertsPage /></DashboardLayout>} />
+        <Route path="/dashboard/statistics" element={<DashboardLayout><StatisticsPage /></DashboardLayout>} />
+        <Route path="/dashboard/settings" element={<DashboardLayout><SettingsPage /></DashboardLayout>} />
+      </Routes>
+    </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
