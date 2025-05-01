@@ -92,7 +92,7 @@ export default function DashboardPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="rounded-full p-2 bg-amber-100 dark:bg-amber-900/50">
-                  <AlertTriangle className="h-4 w-4 text-amber-600" />
+                  <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-sm font-medium">Speed Alert</p>
