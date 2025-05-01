@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
-@import url('https://rsms.me/inter/inter.css');
 
-body {
-  font-family: 'Inter', sans-serif;
-}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
