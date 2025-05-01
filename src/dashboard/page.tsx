@@ -61,7 +61,59 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
       </div>
-
+      <div className="grid gap-4 md:grid-cols-7">
+        <Card className="md:col-span-4">
+          <CardHeader>
+            <CardTitle className="text-xl">Vehicle Locations</CardTitle>
+            <CardDescription>Current position of all your vehicles</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="aspect-video rounded-md bg-muted flex items-center justify-center">
+              <MapPin className="h-8 w-8 text-muted-foreground/50" />
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="md:col-span-3">
+          <CardHeader>
+            <CardTitle className="text-xl">Recent Alerts</CardTitle>
+            <CardDescription>Latest notifications from your vehicles</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <div className="rounded-full p-2 bg-red-100 dark:bg-red-900/50">
+                  <ShieldAlert className="h-4 w-4 text-red-600 dark:text-red-400" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">Geofence Exit Alert</p>
+                  <p className="text-xs text-muted-foreground">Vehicle XYZ-123 left designated zone</p>
+                  <p className="text-xs text-muted-foreground">Today, 10:42 AM</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="rounded-full p-2 bg-amber-100 dark:bg-amber-900/50">
+                  <AlertTriangle className="h-4 w-4 text-amber-600" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">Speed Alert</p>
+                  <p className="text-xs text-muted-foreground">Vehicle ABC-789 exceeded speed limit (92 km/h)</p>
+                  <p className="text-xs text-muted-foreground">Today, 9:15 AM</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+              <div className="rounded-full p-2 bg-blue-100 dark:bg-blue-900/50">
+                    <Battery className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                  </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium">Low Battery</p>
+                  <p className="text-xs text-muted-foreground">Vehicle DEF-456 tracker battery at 15%</p>
+                  <p className="text-xs text-muted-foreground">Yesterday, 6:30 PM</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }
