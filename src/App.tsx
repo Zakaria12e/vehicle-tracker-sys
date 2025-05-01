@@ -21,7 +21,6 @@ function  App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<DashboardLayout><DashboardPage /></DashboardLayout>} />
         <Route path="/dashboard/vehicles" element={<DashboardLayout><VehiclesPage /></DashboardLayout>} />
-        <Route path="/dashboard/vehicles/add" element={<DashboardLayout><AddVehiclePage /></DashboardLayout>} />
         <Route path="/dashboard/tracking" element={<DashboardLayout><TrackingPage /></DashboardLayout>} />
         <Route path="/dashboard/history" element={<DashboardLayout><HistoryPage /></DashboardLayout>} />
         <Route path="/dashboard/geofencing" element={<DashboardLayout><GeofencingPage /></DashboardLayout>} />

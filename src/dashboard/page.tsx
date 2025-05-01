@@ -11,12 +11,7 @@ export default function DashboardPage() {
           <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, name</p>
         </div>
-        <Button className="gap-1" asChild>
-          <a href="/dashboard/vehicles/add">
-            <Plus className="h-4 w-4" />
-            Add Vehicle
-          </a>
-        </Button>
+       
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

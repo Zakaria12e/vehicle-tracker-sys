@@ -81,7 +81,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <Bell className="h-5 w-5" />
               <span className="absolute right-1 top-1 h-2 w-2 rounded-full bg-primary"></span>
             </Button>
-            <ModeToggle/>
+            
             <Avatar>
               <AvatarImage src="/placeholder.svg" alt="User" />
               <AvatarFallback>JD</AvatarFallback>
