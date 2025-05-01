@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { Plus, MapPin, Clock , Battery, MoreHorizontal, ArrowUpRight, Pencil, Trash2} from "lucide-react"
+import { Plus, Search, MapPin, Clock , Battery, MoreHorizontal, ArrowUpRight, Pencil, Trash2} from "lucide-react"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -75,7 +76,20 @@ export default function VehiclesPage() {
         </Dialog>
       </div>
 
-    
+      <div className="flex items-center gap-4">
+        <div className="relative flex-1">
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Input type="search" placeholder="Search vehicles..." className="w-full pl-8" />
+        </div>
+        <Tabs defaultValue="all" className="w-auto">
+          <TabsList>
+            <TabsTrigger value="all">All</TabsTrigger>
+            <TabsTrigger value="active">Active</TabsTrigger>
+            <TabsTrigger value="idle">Idle</TabsTrigger>
+            <TabsTrigger value="offline">Offline</TabsTrigger>
+          </TabsList>
+        </Tabs>
+      </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     
