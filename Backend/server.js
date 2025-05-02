@@ -11,6 +11,7 @@ const rateLimit = require('express-rate-limit');
 const hpp = require('hpp');
 const cors = require('cors');
 const errorHandler = require('./middleware/error');
+const vehicleRoutes = require('./routes/vehicleRoutes');
 require('dotenv').config();
 const connectDB = require('./config/db');
 
@@ -23,7 +24,6 @@ connectDB();
 // Route files
 const auth = require('./routes/auth');
 // Import additional routes here as they are created
-// const vehicles = require('./routes/vehicles');
 // const tracking = require('./routes/tracking');
 
 const app = express();
@@ -66,8 +66,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Mount routers
 app.use('/api/v1/auth', auth);
+// Mount the vehicle routes
+app.use('/api/v1/vehicles', vehicleRoutes);
 // Mount additional routes here as they are created
-// app.use('/api/v1/vehicles', vehicles);
 // app.use('/api/v1/tracking', tracking);
 
 // Error handler middleware (must be after route mounting)
